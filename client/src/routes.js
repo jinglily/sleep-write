@@ -9,7 +9,7 @@ import Work from './Work';
 class Routers extends Component {
   render() {
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path="/" component={App} >
           <Route path='/Home'  component={Home} />
           <Route path='/Work'  component={Work} />
