@@ -15,6 +15,7 @@ class Post extends React.Component{
 
     return(
       <div>
+        <h1>{this.state.post.title}</h1>
         {this.state.post.content}
 
       </div>
