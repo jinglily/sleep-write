@@ -11,7 +11,7 @@ class Routers extends Component {
     return (
       <Router history={browserHistory}>
         <Route path="/" component={App} >
-          <Route path='/Home'  component={Home} />
+          <Route path='/Work'  component={Home} />
           <Route path='/Work'  component={Work} />
         </Route>
       </Router>

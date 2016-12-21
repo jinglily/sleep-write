@@ -6,8 +6,8 @@ class App extends React.Component{
    render(){
      return(
        <div>
-         <Link to='/home'>home</Link>
-         <Link to='/work'>work</Link>
+         <Link className="top" to='/home'>home</Link>
+         <Link className="top" to='/work'>work</Link>
          {this.props.children}
        </div>
      )

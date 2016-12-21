@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
 import Routes from './routes';
-
+import './main.css'
 
 
 ReactDOM.render(<Routes />, document.getElementById('root'));

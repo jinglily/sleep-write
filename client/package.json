@@ -28,6 +28,8 @@
       "jquery": "^3.1.1",
       "react": "^15.3.2",
       "react-dom": "^15.3.2",
-      "react-router": "^3.0.0"
+      "react-router": "^3.0.0",
+      "mongoose": "^4.7.3",
+      "body-parser": "^1.15.2"
     }
   }

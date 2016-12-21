@@ -6,8 +6,13 @@ app.use(express.static('public'));
 // 没有这一行，后面 sendFile 的 index.html 就找不到了。
 
 app.get('*',function(req,res){
-  console.log('success');
-  res.sendFile('index.html',{root:'public'});
+  // console.log('success');
+  // res.sendFile('index.html',{root:'public'});
+  
+    Post.find().exec(function(err, posts) {
+     if(err) return console.log(err);
+     res.json({posts})
+   });
 })
 
 app.listen(4000,function(){
