@@ -9,8 +9,12 @@ module.exports = function(app){
    });
   })
 
-  app.get('/posts/:id',function() {
-    res.send('read a post')
+  app.get('/posts/:_id',function( req,res ) {
+    Post.findById(req.params._id,function(err,post){
+    if(err) return console.log(err);
+    console.log(post);
+    res.send(post)
+  })
   })
 
   app.put('/posts/:id',function() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import { Link  } from 'react-router';
 class Home extends React.Component{
   constructor(){
     super();
@@ -13,7 +13,7 @@ class Home extends React.Component{
     .then(res => this.setState({title:res.data.posts}))
   }
   render(){
-    let text = this.state.title.map((item,i) => <div key={i} className="title">{item.title}</div>)
+    let text = this.state.title.map((item,i) => <Link to={`/posts/${item._id}`} key={i} className="title">{item.title}</Link>)
 
     return(
       <div>

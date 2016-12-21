@@ -5,14 +5,16 @@ import { Router, Route, hashHistory, IndexRoute, browserHistory  } from 'react-r
 import App from './App';
 import Home from './Home';
 import Work from './Work';
+import Post from './Post';
 
 class Routers extends Component {
   render() {
     return (
       <Router history={browserHistory}>
         <Route path="/" component={App} >
-          <Route path='/Work'  component={Home} />
+          <IndexRoute component={Home} />
           <Route path='/Work'  component={Work} />
+          <Route path="posts/:_id" component={Post} />
         </Route>
       </Router>
     );
