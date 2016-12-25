@@ -7,12 +7,7 @@ app.use(express.static('public'));
 
 app.get('*',function(req,res){
   // console.log('success');
-  // res.sendFile('index.html',{root:'public'});
-  
-    Post.find().exec(function(err, posts) {
-     if(err) return console.log(err);
-     res.json({posts})
-   });
+  res.sendFile('index.html',{root:'public'});
 })
 
 app.listen(4000,function(){

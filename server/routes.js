@@ -32,6 +32,7 @@ module.exports = function(app){
     post.save();
     console.log(req.body)
     res.json(req.body)
+    // res.status(500).json({error:'执行失败'});
   })
 
 

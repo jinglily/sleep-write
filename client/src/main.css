@@ -4,19 +4,22 @@
 }
 .title{
   display: block;
-  width: 300px;
+  width: 600px;
   height: 60px;
   background:#009688;
   margin-left: 10px;
   margin-top: 10px;
   border-radius: 5px;
-  text-align: center;
   line-height: 60px;
   font-size: 26px;
-  color: #fff;
+
   padding: 10px;
   box-shadow: 0px 3px 3px #ccc;
-  text-decoration: none;
+
+}
+.title a{
+    text-decoration: none;
+    color: #fff;
 }
 .top{
   display: block;
@@ -52,7 +55,7 @@
   width: 300px;
   height: 30px;
 }
-.btn button{
+.btns{
   width: 80px;
   height: 30px;
   background: #009688;

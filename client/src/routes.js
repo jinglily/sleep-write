@@ -6,6 +6,7 @@ import App from './App';
 import Home from './Home';
 import Work from './Work';
 import Post from './Post';
+import Edit from './Edit';
 
 class Routers extends Component {
   render() {
@@ -15,6 +16,8 @@ class Routers extends Component {
           <IndexRoute component={Home} />
           <Route path='/Work'  component={Work} />
           <Route path="posts/:_id" component={Post} />
+          <Route path="edit/:_id" component={Edit} />
+
         </Route>
       </Router>
     );

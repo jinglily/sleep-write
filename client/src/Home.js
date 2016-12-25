@@ -9,11 +9,19 @@ class Home extends React.Component{
     }
   }
   componentDidMount(){
-    axios.get('http://localhost:4000/posts')
+    axios.get('http://localhost:4000/posts/')
     .then(res => this.setState({title:res.data.posts}))
   }
   render(){
-    let text = this.state.title.map((item,i) => <Link to={`/posts/${item._id}`} key={i} className="title">{item.title}</Link>)
+    let text = this.state.title.map((item,i) => <div key={i} className="title">
+
+    <Link to={`/posts/${item._id}`}>{item.title}</Link>
+    <div style={{float:"right",fontSize:"16px"}}>
+    <Link to={`/Edit/${item._id}`} style={{marginRight:"10px"}}>更新</Link>
+    <Link to={`/posts/${item._id}`}>删除</Link>
+    </div>
+
+  </div>)
 
     return(
       <div>
