@@ -4,14 +4,16 @@
 }
 .title{
   display: block;
-  width: 500px;
-  height: 40px;
-  margin: 0 auto;
-  margin-top: 20px;
+  width: 300px;
+  height: 60px;
+  background:#009688;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
   text-align: center;
-  line-height: 40px;
-  font-size: 20px;
-  color: #333;
+  line-height: 60px;
+  font-size: 26px;
+  color: #fff;
   padding: 10px;
   box-shadow: 0px 3px 3px #ccc;
   text-decoration: none;
@@ -21,6 +23,7 @@
 
   font-size: 36px;
   margin: 0 auto;
+  margin-bottom: 20px;
   width: 100%;
   min-width: 500px;
   height: 80px;
@@ -34,4 +37,27 @@
   color: #fff;
   margin-right:30px;
 
+}
+.btn{
+  width: 100%;
+}
+.btn form{
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 50px
+}
+.btn input{
+
+  margin-top: 10px;
+  width: 300px;
+  height: 30px;
+}
+.btn button{
+  width: 80px;
+  height: 30px;
+  background: #009688;
+  border:none;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #fff;
 }

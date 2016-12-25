@@ -7,8 +7,8 @@ class App extends React.Component{
      return(
        <div>
          <div className="top">
-         <Link className="tops" to='/'>home</Link>
-         <Link className="tops" to='/work'>work</Link>
+         <Link activeStyle={{color:'#00695C'}} onlyActiveOnIndex={true} className="tops" to='/'>home</Link>
+         <Link activeStyle={{color:'#00695C'}} className="tops" to='/work'>New</Link>
          </div>
          {this.props.children}
        </div>

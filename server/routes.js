@@ -25,7 +25,7 @@ module.exports = function(app){
     res.send('delete a post')
   })
 
-  app.post('/posts',function (req,res) {
+  app.post('/posts/',function (req,res) {
     const post = new Post();
     post.title=req.body.title;
     post.content=req.body.content;
