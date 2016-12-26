@@ -25,8 +25,12 @@ module.exports = function(app){
     })
   })
 
-  app.delete('/posts/:id',function() {
-    res.send('delete a post')
+  app.delete('/posts/:id',function( req,res ) {
+    console.log(req.params.id);
+    Post.remove({_id:req.params.id},function(err){
+      if (err) return handleError(err);
+      res.send('成功')
+    })
   })
 
   app.post('/posts/',function (req,res) {
