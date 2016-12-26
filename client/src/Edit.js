@@ -14,14 +14,14 @@ class Work extends React.Component{
     axios.get(`http://localhost:4000/posts/${this.props.params._id}`)
       .then(res => this.setState({title:res.data.title,content:res.data.content}))
   }
-  handerClick(){
+  handerClick(e){
     this.setState({disable:true})
     e.preventDefault();
     var title = this.refs.title.value;
     var content = this.refs.content.value;
     const data = {title:title,content:content}
     console.log(data);
-    axios.post('http://localhost:4000/posts',data)
+    axios.put(`http://localhost:4000/posts/${this.props.params._id}`,data)
       .then((res) => this.props.router.push("/"))
       .catch((err) => {console.log(err)})
   }

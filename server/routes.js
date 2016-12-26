@@ -17,8 +17,12 @@ module.exports = function(app){
   })
   })
 
-  app.put('/posts/:id',function() {
-    res.send('updata a post')
+  app.put('/posts/:id',function( req,res ) {
+    console.log(req.body);
+    Post.findOneAndUpdate({_id:req.params.id},req.body,function(err){
+      if(err) res.status(500).json({error:'更新失败'})
+      res.send('updata a post')
+    })
   })
 
   app.delete('/posts/:id',function() {
